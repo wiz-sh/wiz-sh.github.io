@@ -4,12 +4,12 @@ description: "Learn how Wiz validates manifests, resolves Git revisions, materia
 ---
 
 
-`@wiz/pm` validates `manifest.json`, resolves Git revisions, creates deterministic lockfiles,
+`@wiz-sh/pm` validates `manifest.json`, resolves Git revisions, creates deterministic lockfiles,
 stores immutable commits under `WIZ_HOME`, and atomically swaps complete `wiz_modules` trees.
 Package and bin names, manifest paths, symlinks, and indexes are checked against traversal.
 
 Postinstall scripts are denied until the exact package identity—repository and commit—is in
-`wiz.approvals.json`. Updating a commit invalidates its previous approval. `@wiz/runtime`
+`wiz.approvals.json`. Updating a commit invalidates its previous approval. `@wiz-sh/runtime`
 handles `run`, `script`, `x`, and `dlx`; it receives project/package identities from PM and
 constructs the exported `WIZ_*` environment.
 

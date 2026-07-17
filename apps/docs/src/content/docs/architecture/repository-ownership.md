@@ -9,11 +9,11 @@ and test surface.
 
 | Repository | Owns | Published artifacts |
 | --- | --- | --- |
-| `wiz/compiler` | compiler and project configuration | `@wiz/compiler`, `@wiz/config` |
-| `wiz/package-manager` | manifests, lockfiles, stores, registry/Git/local resolution, process runtime | `@wiz/pm`, `@wiz/runtime` |
-| `wiz/linter` | lossless formatter and semantic linter | `@wiz/formatter`, `@wiz/linter` |
-| `wiz/lsp` | language service and protocol server | `@wiz/language-service`, `@wiz/lsp` |
-| `wiz/registry` | Elysia API, worker, migrations, Compose deployment, client SDK | registry image, `@wiz/registry-client` |
+| `wiz/compiler` | compiler and project configuration | `@wiz-sh/compiler`, `@wiz-sh/config` |
+| `wiz/package-manager` | manifests, lockfiles, stores, registry/Git/local resolution, process runtime | `@wiz-sh/pm`, `@wiz-sh/runtime` |
+| `wiz/linter` | lossless formatter and semantic linter | `@wiz-sh/formatter`, `@wiz-sh/linter` |
+| `wiz/lsp` | language service and protocol server | `@wiz-sh/language-service`, `@wiz-sh/lsp` |
+| `wiz/registry` | Elysia API, worker, migrations, Compose deployment, client SDK | registry image, `@wiz-sh/registry-client` |
 | `wiz/types` | installable declaration packs for shells and external tools | `@types/*` Wiz packages |
 | `wiz/cli` | command-line application and release packaging | `wiz` executable package |
 | `docs` | Starlight documentation and runnable documentation checks | static documentation site |

@@ -24,6 +24,6 @@ Content-Length: 58\r\n
 ```
 
 The LSP package is transport-only: cross-file rename, symbol ownership,
-signature help, and quick-fix generation remain in `@wiz/language-service`.
+signature help, and quick-fix generation remain in `@wiz-sh/language-service`.
 Completions and signature help include the bundled shell, coreutils, Git, curl,
 Docker, systemctl, jq, SSH, and related ambient command declarations.

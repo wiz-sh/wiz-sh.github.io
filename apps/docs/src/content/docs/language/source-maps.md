@@ -10,7 +10,7 @@ source/generated filenames, and generated/source start and end positions. Named
 mappings identify functions where available.
 
 Use `wiz c map dist/main.sh:20` to print the nearest source line. Library consumers can call
-`loadSourceMap`, `mapGeneratedToSource`, and `mapSourceToGenerated` from `@wiz/compiler`.
+`loadSourceMap`, `mapGeneratedToSource`, and `mapSourceToGenerated` from `@wiz-sh/compiler`.
 
 ```json
 {

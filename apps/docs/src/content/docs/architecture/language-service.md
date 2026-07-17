@@ -4,7 +4,7 @@ description: "Understand project snapshots, editor intelligence, sourced-file gr
 ---
 
 
-`@wiz/language-service` owns open document snapshots and reusable editor features. Updating a
+`@wiz-sh/language-service` owns open document snapshots and reusable editor features. Updating a
 document reparses it, rebuilds shared project scopes, checks calls and assignments, and runs
 configured lint rules. Hover, definitions, references, completion, signature help, rename,
 symbols, semantic tokens, formatting edits, and quick fixes operate on that snapshot.
@@ -20,6 +20,6 @@ share one project scope. Open editor buffers take precedence over disk content,
 and shell-file watcher events rebuild disk-backed snapshots after external
 changes.
 
-`@wiz/lsp` only translates offsets and protocol objects. It does not duplicate semantic rules.
+`@wiz-sh/lsp` only translates offsets and protocol objects. It does not duplicate semantic rules.
 The VS Code extension launches `wiz c lsp --stdio`, watches `config.wiz.json`, and registers
 commands; no compiler code is bundled into extension handlers.

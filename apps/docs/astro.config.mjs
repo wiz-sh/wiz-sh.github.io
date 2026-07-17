@@ -11,7 +11,8 @@ const wizLanguage = {
 };
 
 export default defineConfig({
-    site: "https://wiz.sh",
+    site: process.env.WIZ_DOCS_SITE ?? "https://wiz.sh",
+    base: process.env.WIZ_DOCS_BASE ?? "/",
     integrations: [
         starlight({
             title: "Wiz",

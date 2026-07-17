@@ -4,22 +4,22 @@ description: "See how package management, runtime execution, the Wiz compiler, t
 ---
 
 
-The CLI is an application over independently testable packages. `@wiz/pm` owns Git
-resolution, manifests, lockfiles, stores, links, approvals, and installation. `@wiz/runtime`
-depends on its stable APIs to find and execute bins. Wiz tooling shares `@wiz/compiler`.
+The CLI is an application over independently testable packages. `@wiz-sh/pm` owns Git
+resolution, manifests, lockfiles, stores, links, approvals, and installation. `@wiz-sh/runtime`
+depends on its stable APIs to find and execute bins. Wiz tooling shares `@wiz-sh/compiler`.
 
 ```mermaid
 flowchart LR
-    CLI[apps/cli] --> PM[@wiz/pm]
-    CLI --> RT[@wiz/runtime]
+    CLI[apps/cli] --> PM[@wiz-sh/pm]
+    CLI --> RT[@wiz-sh/runtime]
     RT --> PM
-    CLI --> C[@wiz/compiler]
-    F[@wiz/formatter] --> C
-    L[@wiz/linter] --> C
-    LS[@wiz/language-service] --> C
+    CLI --> C[@wiz-sh/compiler]
+    F[@wiz-sh/formatter] --> C
+    L[@wiz-sh/linter] --> C
+    LS[@wiz-sh/language-service] --> C
     LS --> F
     LS --> L
-    LSP[@wiz/lsp] --> LS
+    LSP[@wiz-sh/lsp] --> LS
     VS[apps/vscode] --> LSP
 ```
 

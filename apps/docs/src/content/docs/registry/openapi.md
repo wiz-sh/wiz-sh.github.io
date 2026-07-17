@@ -12,5 +12,5 @@ curl --fail http://localhost:3000/openapi/json > registry.openapi.json
 ```
 
 Routes have stable operation IDs, tags, typed parameters and bodies, security declarations, and a
-shared structured error shape. The reusable `@wiz/registry-client` wraps transport failures as
+shared structured error shape. The reusable `@wiz-sh/registry-client` wraps transport failures as
 `RegistryError` with `code`, HTTP `status`, `requestId`, and typed `details`.

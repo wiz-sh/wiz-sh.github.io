@@ -4,7 +4,7 @@ description: "Follow Wiz source from lossless parsing through binding, checking,
 ---
 
 
-`@wiz/compiler` keeps lexer, parser, immutable green tree/red navigation layer, semantic AST,
+`@wiz-sh/compiler` keeps lexer, parser, immutable green tree/red navigation layer, semantic AST,
 binder, checker, target backends, emitter, and source maps in one package.
 
 ```text
@@ -29,7 +29,7 @@ between dialects is intentionally limited to the syntax the selected backend
 can preserve. The target controls the shebang, output suffix, declaration form,
 runtime assertions, and rewritten static source paths.
 
-Bundling stays inside `@wiz/compiler` because it consumes the checked source graph and lowered
+Bundling stays inside `@wiz-sh/compiler` because it consumes the checked source graph and lowered
 target output. The bundler replaces inert source markers after every dependency has been emitted,
 strips dependency shebangs, preserves execution order, and returns only graph entry points.
 Creating a separate package would duplicate module resolution and weaken compiler invariants.

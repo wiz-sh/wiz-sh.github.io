@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@wiz/docs-workspace",
+      "name": "@wiz-sh/docs-workspace",
       "devDependencies": {
         "@biomejs/biome": "^2.2.0",
         "bun-types": "^1.2.19",
@@ -11,7 +11,7 @@
       },
     },
     "apps/docs": {
-      "name": "@wiz/docs",
+      "name": "@wiz-sh/docs",
       "version": "0.1.0",
       "dependencies": {
         "@astrojs/starlight": "^0.41.3",
@@ -334,7 +334,7 @@
 
     "@ungap/structured-clone": ["@ungap/structured-clone@1.3.3", "", {}, "sha512-60YRaenCQcVjYEKOcG824+DRGGIQ3VKErcBoAEDJZz5bKIs2ZG+X/H9Nk+Q6EVkwJk5QNApxbrc5QtBSwtrXAg=="],
 
-    "@wiz/docs": ["@wiz/docs@workspace:apps/docs"],
+    "@wiz-sh/docs": ["@wiz-sh/docs@workspace:apps/docs"],
 
     "acorn": ["acorn@8.17.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-xRQbDb9BnwDafYNn6Vwl839DYVjqXYb1XVGtWAZ1kcDc6iwAL4hg3B1dZlRiuENFeO2H53gFG3in621AdERVAg=="],
 

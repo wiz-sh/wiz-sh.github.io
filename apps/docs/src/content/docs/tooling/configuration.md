@@ -48,7 +48,7 @@ reports unsupported non-portable constructs before emission.
 sources, including modules under `wiz_modules`. `compiler.minify` compacts the lowered target
 output. Command-line `--bundle` and `--minify` enable either behavior for one build.
 
-The JSON Schema is shipped at `@wiz/config/schema`.
+The JSON Schema is shipped at `@wiz-sh/config/schema`.
 
 Runtime validation enforces the same booleans, enums, integer limits, arrays,
 and lint severities as the schema. Invalid configuration makes every project

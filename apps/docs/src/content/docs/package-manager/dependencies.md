@@ -6,7 +6,7 @@ description: "Mix registry, Git, local, and workspace dependencies safely."
 ```json
 {
     "dependencies": {
-        "@wiz/runtime": "^1.4.0",
+        "@wiz-sh/runtime": "^1.4.0",
         "git-helper": {
             "git": "https://code.example/helper.git",
             "rev": "4f92820abc"
