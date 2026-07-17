@@ -14,21 +14,22 @@ and test surface.
 | `wiz/linter` | lossless formatter and semantic linter | `@wiz/formatter`, `@wiz/linter` |
 | `wiz/lsp` | language service and protocol server | `@wiz/language-service`, `@wiz/lsp` |
 | `wiz/registry` | Elysia API, worker, migrations, Compose deployment, client SDK | registry image, `@wiz/registry-client` |
-| `wiz/stdlib` | runtime standard library and installable declaration packs | `@wiz/stdlib`, `@types/*` Wiz packages |
+| `wiz/types` | installable declaration packs for shells and external tools | `@types/*` Wiz packages |
 | `wiz/cli` | command-line application and release packaging | `wiz` executable package |
 | `docs` | Starlight documentation and runnable documentation checks | static documentation site |
 | `vscode-extension` | thin editor client, grammar, snippets, icons | VSIX and marketplace extension |
 
 `config` belongs with the compiler because it defines compiler projects and is consumed throughout the
 language toolchain. `runtime` belongs with the package manager because executable discovery and package
-materialization share the store, lockfile, and environment contract. Types and the standard library get
-a dedicated repository: they release independently and should not force a compiler release when a CLI
-declaration gains an option.
+materialization share the store, lockfile, and environment contract. Declaration packages get a
+dedicated repository: they release independently and should not force a compiler release when a CLI
+declaration gains an option. Wiz deliberately has no wrapper-oriented standard library; programs call
+the underlying commands directly and import declarations only when static command typing is useful.
 
 ## Dependency direction
 
 ```text
-stdlib/types ───────────────┐
+types ──────────────────────┐
                             │
 compiler/config ──▶ formatter/linter ──▶ language-service/LSP ──▶ VS Code
         │                          │
@@ -45,7 +46,7 @@ HTTP contracts; the client never imports server or Drizzle internals.
 
 1. Tag and publish one compatible version of every public package from the integrated tree.
 2. Extract repositories in dependency order: compiler, registry client/server, package manager,
-   formatter/linter, LSP, stdlib/types, CLI, extension, then docs.
+   formatter/linter, LSP, types, CLI, extension, then docs.
 3. Replace `workspace:*` only after the dependency is available at the same release version. Never use
    relative `file:` dependencies in an independently clonable repository.
 4. Move each package's unit tests, examples, API documentation, release workflow, ownership rules, and
