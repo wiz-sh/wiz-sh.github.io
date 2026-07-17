@@ -41,7 +41,7 @@ paths so a repository can move between machines without changes.
 
 ```json
 {
-    "$schema": "https://raw.githubusercontent.com/hazelcaffe/wiz/main/packages/pm/schemas/manifest.schema.json",
+    "$schema": "https://raw.githubusercontent.com/wiz-sh/package-manager/main/packages/pm/schemas/manifest.schema.json",
     "name": "suite",
     "private": true,
     "workspaces": ["apps/*", "packages/*"],

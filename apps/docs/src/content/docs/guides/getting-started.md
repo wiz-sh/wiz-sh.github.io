@@ -8,7 +8,7 @@ description: "Install Wiz, create a package, compile a typed shell entry point, 
 Wiz uses Bun for installation, builds, and tests:
 
 ```console
-git clone https://github.com/hazelcaffe/wiz.git
+git clone https://github.com/wiz-sh/wiz.git
 cd wiz
 bun install
 bun run build
